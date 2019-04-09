@@ -1,1 +1,124 @@
-<h1> Tuấn </h1>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng kí học phần</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+
+<body></body>
+
+<div id="container">
+    <div class="title">
+        Đăng kí môn học
+    </div>
+
+    <div id="form" >
+        <form action="#" method="POST" onsubmit="return false"></form>
+
+            <div class="text">
+                Mã số: &nbsp;<input type="text" name="maso" placeholder="Mã số" size="50px" class="input" id="mssv">
+            </div>
+
+            <div class="text">
+                Họ tên: <input type="text" name="hoten" placeholder="Họ tên" size="50px" class="input" id="name">
+            </div>
+
+            <div class="text" id="genger">
+                Giới tính:
+                <input type="radio" name="genger" checked value="Nam" id="boy" > Nam
+                <input type="radio" name="genger" value="Nữ" id="girl"> Nữ
+            </div>
+
+            <div class="text" id="birthday">
+                Ngày sinh:
+                <select id="day">
+                    <script>
+               
+                            var day="";
+
+                            for ( var i = 1; i <= 31;i++) {
+                                day +="<option>"+i+"</option>";
+                            }
+                            document.write(day); 
+                    </script>
+                </select>
+                <select id="month">
+                        <script>
+                                var month="";
+                                for ( var i = 1; i <= 12;i++) {
+                                    month +="<option>"+i+"</option>";
+                                }
+                                document.write(month); 
+                        </script>
+                </select>
+                <select id="year">
+                        <script>
+                                var year="";
+
+                                for ( var i = 2000; i >= 1990;i--) {
+                                    year +="<option>"+i+"</option>";
+                                }
+                                document.write(year); 
+                        </script>
+                </select>
+
+                </select>
+            </div>
+            <div class="col">
+                <div class="subject text">
+                    Các môn học:<br>
+                    <select multiple size="10px" class="select" id="col1">
+                        <option value="toancaocap">Toán cao cấp</option>
+                        <option value="toantohop">Toán tổ hợp</option>
+                        <option value="xacsuatthongke">Xác suất thống kê</option>
+                        <option value="lythuyetso">Lý thuyết số</option>
+                        <option value="vitichphan">Vi tích phân</option>
+                    </select>
+                </div>
+
+                <div class="menubutton text">
+                    <button class="button" onclick="Add()">></button>
+                    <button class="button" onclick="AddAll()">>></button>
+                    <button class="button" onclick="Delete()"><</button>
+                    <button class="button" onclick="DeleteAll()"><< </button>
+
+                </div>
+                <div class="subject text">
+                    Đã chọn:<br>
+                    <select multiple size="10px" class="select" id="col2">
+                    </select>
+                </div>
+            </div>
+
+            <div class="submit">
+                <button class="btn" onclick="Register()">Đăng kí</button>
+                <button class="btn">Xem danh sách</button>
+                <button class="btn">submit</button>
+            </div>
+
+            <div class="info">
+                <table id="table">
+                    <tr>
+                        <th>Mã số</th>
+                        <th>Họ tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="js.js">
+
+</script>
+</body>
+
+</html>
